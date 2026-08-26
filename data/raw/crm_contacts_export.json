@@ -1,0 +1,82 @@
+[
+  {
+    "crm_customer_id": "c1001",
+    "account_name": "Klinikum Nordstadt GmbH",
+    "segment": "Healthcare",
+    "account_owner": "A. Weber",
+    "last_contact_date": "2026-01-14",
+    "renewal_risk_score": 0.33
+  },
+  {
+    "crm_customer_id": "c1002",
+    "account_name": "Universitaet Erlangen Bibliothek",
+    "segment": "Education",
+    "account_owner": "A. Weber",
+    "last_contact_date": "2026-09-02",
+    "renewal_risk_score": 0.8
+  },
+  {
+    "crm_customer_id": "c1003",
+    "account_name": "MedCare Consulting AG",
+    "segment": "Healthcare",
+    "account_owner": "A. Weber",
+    "last_contact_date": "2026-08-02",
+    "renewal_risk_score": 0.28
+  },
+  {
+    "crm_customer_id": "c1004",
+    "account_name": "Fachhochschule Franken",
+    "segment": "Education",
+    "account_owner": "M. Schmidt",
+    "last_contact_date": "2026-03-25",
+    "renewal_risk_score": 0.56
+  },
+  {
+    "crm_customer_id": "c1005",
+    "account_name": "St. Elisabeth Krankenhaus",
+    "segment": "Healthcare",
+    "account_owner": "S. Wagner",
+    "last_contact_date": "2026-06-13",
+    "renewal_risk_score": 0.41
+  },
+  {
+    "crm_customer_id": "c1006",
+    "account_name": "PharmaLogix Vertrieb GmbH",
+    "segment": "Pharma",
+    "account_owner": "S. Wagner",
+    "last_contact_date": "2026-07-03",
+    "renewal_risk_score": 0.6
+  },
+  {
+    "crm_customer_id": "c1007",
+    "account_name": "Bayerische Aerztekammer",
+    "segment": "Association",
+    "account_owner": "M. Schmidt",
+    "last_contact_date": "2026-11-28",
+    "renewal_risk_score": 0.33
+  },
+  {
+    "crm_customer_id": "c1008",
+    "account_name": "Reha-Zentrum Sued",
+    "segment": "Healthcare",
+    "account_owner": "M. Schmidt",
+    "last_contact_date": "2026-09-13",
+    "renewal_risk_score": 0.47
+  },
+  {
+    "crm_customer_id": "c1009",
+    "account_name": "MedTech Solutions Erlangen",
+    "segment": "Pharma",
+    "account_owner": "M. Schmidt",
+    "last_contact_date": "2026-01-25",
+    "renewal_risk_score": 0.07
+  },
+  {
+    "crm_customer_id": "c1010",
+    "account_name": "Landesbibliothek Bayern",
+    "segment": "Education",
+    "account_owner": "J. Klein",
+    "last_contact_date": "2026-08-22",
+    "renewal_risk_score": 0.63
+  }
+]
