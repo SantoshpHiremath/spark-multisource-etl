@@ -1,11 +1,8 @@
 """
-Generates realistic, synthetic multi-source raw data mirroring exactly
-the source types the posting names: "ERP- und CRM-Systeme, Excel-Dateien
-oder APIs" (ERP and CRM systems, Excel files, or APIs). Honestly
-disclosed: this is synthetic data modeled on a plausible B2B
-subscription/sales business (not real Thieme or any company's data,
-which I have no access to), but it's deliberately built with the kind
-of real messiness a genuine multi-source ETL job has to handle --
+Generates realistic, synthetic multi-source raw data covering ERP and
+CRM exports and Excel files. The data is synthetic, modeled on a
+plausible B2B subscription/sales business, and deliberately built with
+the kind of real messiness a genuine multi-source ETL job has to handle --
 inconsistent keys, missing fields, duplicate records, mismatched date
 formats across sources -- rather than three already-clean tables that
 would make the "integration" step trivial.
@@ -109,9 +106,7 @@ def generate_crm_contacts_json():
 
 def generate_product_catalog_excel_style_csv():
     """Excel-style source: a product catalog maintained manually in
-    Excel (represented here as CSV, since this sandbox has no Windows
-    Excel to author a real .xlsx -- honestly disclosed, same
-    constraint pattern as powerquery-sap-reporting). Includes a real,
+    Excel (represented here as CSV rather than a real .xlsx). Includes a real,
     common Excel-export problem: trailing whitespace and inconsistent
     capitalization in the product code column, which breaks a naive
     exact-match join if not cleaned."""

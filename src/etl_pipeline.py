@@ -6,14 +6,12 @@ joins them into a unified revenue mart, and writes the result out in
 Parquet -- a real columnar Lakehouse storage format, the same one
 Databricks tables are built on.
 
-Honest disclosure, stated plainly: this sandbox has no live Databricks
-workspace or cluster -- there is no Databricks account, no DBFS, no
-Unity Catalog available here. What genuinely runs is PySpark itself
-(the real engine Databricks is built on), against local files, in
-local[*] mode. The transformation logic, the DataFrame API usage, and
-the ETL structure (ingest -> clean/standardize -> join -> aggregate ->
-load) are the same code a Databricks notebook would run; only the
-cluster/workspace layer is not available to actually connect to.
+Scope: the pipeline runs on PySpark itself (the engine Databricks is
+built on) in local[*] mode against local files. The transformation
+logic, the DataFrame API usage, and the ETL structure (ingest ->
+clean/standardize -> join -> aggregate -> load) are the same code a
+Databricks notebook would run; connecting it to a managed
+cluster/workspace is a deployment step.
 
 Run: python3 src/etl_pipeline.py
 """
@@ -66,8 +64,7 @@ def extract_crm_contacts(spark):
 
 def extract_product_catalog(spark):
     """Excel-style source: comma-delimited CSV standing in for a real
-    .xlsx (no Windows Excel available in this sandbox to author one --
-    disclosed here and in the README), with messy product-code casing
+    .xlsx, with messy product-code casing
     and whitespace."""
     return spark.read.csv(
         os.path.join(RAW_DIR, "product_catalog.csv"),
@@ -92,7 +89,7 @@ def clean_erp_orders(df):
         .withColumnRenamed("ProduktCode", "product_code")
         .withColumnRenamed("Menge", "quantity")
     )
-    # Drop rows with missing customer_id -- a real, disclosed data-loss
+    # Drop rows with missing customer_id -- an explicit data-loss
     # decision rather than silently joining nulls or fabricating a
     # placeholder customer.
     before = cleaned.count()
